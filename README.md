@@ -6,7 +6,7 @@ Monitors folders and processes files automatically.
 Mipmap Generator: Load images → build a single DDS with full detail levels.
 
 UI:
-Dark/light mode + 5 languages (English, Spanish, French, German, Chinese).
+Dark/light mode + 5 languages (English, Spanish, French, German, Chinese and Russian).
 
 How It Works
 Export from adobe 3d substance painter (_basecolor, _roughness, _metallic, _normal) into a folder
