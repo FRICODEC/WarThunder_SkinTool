@@ -267,6 +267,44 @@ class App(QWidget):
                 'mipmap_success': 'DDS mit Mipmaps erfolgreich generiert!',
                 'image_read_error': 'Bilddatei kann nicht gelesen werden: ',
                 'write_error': 'Fehler beim Schreiben der Ausgabedatei: '
+            },
+            
+                   'ru': {
+                'select_folder': 'Выбрать папку (Источник)',
+                'select_output': 'Выбрать папку для сохранения (DDS)',
+                'convert': 'Конвертировать PNG в DDS',
+                'dark_mode': 'Тёмный режим',
+                'delete_pngs': 'Удалять PNG после конвертации',
+                'source_folder': 'Исходная папка: ',
+                'output_folder': 'Папка для сохранения: ',
+                'language': 'Язык',
+                'alpha_fill': 'Цвет заливки Alpha',
+                'folder_scan': 'Сканировать папку (каждые 5 секунд)',
+                'white': 'Белый (Воздушная техника)',
+                'black': 'Чёрный (Наземная техника)',
+                'none': 'Не выбрано',
+                'format': 'Формат DDS',
+                'dxt5': 'DXT5',
+                'error_title': 'Ошибка',
+                'file_error': 'Ошибка обработки файла: ',
+                'folder_error': 'Выберите исходную папку и папку для сохранения.',
+                'conversion_complete': 'Конвертация завершена',
+                'progress': 'Конвертация...',
+                'settings': 'Настройки',
+                'folders': 'Папки',
+                'conversion': 'Опции конвертации',
+                'appearance': 'Внешний вид',
+                'app_title': 'SkinTool от FRICODEC',
+                'waiting': 'Ожидание изменений файлов...',
+                'mipmap_tab': 'Генератор DDS Mipmap',
+                'skin_tab': 'Конвертер скинов',
+                'mipmap_select_folder': 'Выбрать папку для Mipmap',
+                'mipmap_select_output': 'Выбрать файл для Mipmap',
+                'mipmap_source': 'Папка с Mipmap: ',
+                'mipmap_output': 'Файл для Mipmap: ',
+                'mipmap_base_size': 'Базовый размер (Mip 0):',
+                'mipmap_auto': 'Автозавершение цепочки Mipmap',
+                'mipmap_generate': 'Создать DDS с Mipmap'
             }
         }
 
@@ -303,7 +341,7 @@ class App(QWidget):
         lang_layout.addWidget(lang_label)
         
         self.lang_combo = QComboBox()
-        self.lang_combo.addItems(['English', 'Español', 'Français', '中文', 'Deutsch'])
+        self.lang_combo.addItems(['English', 'Español', 'Français', '中文', 'Deutsch', 'Русский'])
         self.lang_combo.currentIndexChanged.connect(self.change_language)
         lang_layout.addWidget(self.lang_combo)
         
@@ -921,7 +959,7 @@ class App(QWidget):
 
     def change_language(self, index):
         """ Change language based on user selection """
-        languages = ['en', 'es', 'fr', 'zh', 'de']
+        languages = ['en', 'es', 'fr', 'zh', 'de', 'ru']
         self.language = languages[index]
         self.apply_language()
 
